@@ -21,13 +21,14 @@ public class ProblemSet1 {
          *
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        float width1 = 8.5;
-        float height1 = 11;
-        width1 = width1 * 25.4;
-        height1 = height1* 25.4;
-        String result1 = width1 * height1;
+        double width1 = 8.5;
+        double height1 = 11;
+        double millimetersInInch = 25.4;
+        width1 = width1 * millimetersInInch;
+        height1 = height1* millimetersInInch;
+        double result1 = width1 * height1;
 
-        System.out.println(result1 + "square millimeters.")
+        System.out.printf("\n%, .2f square millimeters.", result1);
 
 
         /*
