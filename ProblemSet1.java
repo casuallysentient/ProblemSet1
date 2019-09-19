@@ -70,11 +70,15 @@ public class ProblemSet1 {
     int test2 = 87;
     int test3 = 82;
 
+    double homeworkWeight = 0.15;
+    double quizWeight = 0.35;
+    double testWeight = 0.50;
+
     double averageHomeworkGrade = ((double) homework1 + (double) homework2 + (double) homework3) / 3;
     double averageQuizGrade = ((double) quiz1 + (double) quiz2 + (double) quiz3) / 3;
     double averageTestGrade = ((double) test1 + (double) test2 + (double) test3) / 3;
 
-    double averageGrade = ((double) averageHomeworkGrade * 0.15) + ((double) averageQuizGrade * 0.35) + ((double) averageTestGrade * 0.5);
+    double averageGrade = ((double) averageHomeworkGrade * homeworkWeight) + ((double) averageQuizGrade * quizWeight) + ((double) averageTestGrade * testWeight);
 
     System.out.printf("\n%,.2f%%.\n", averageGrade);
 
@@ -105,8 +109,19 @@ public class ProblemSet1 {
     *
     * What is my take-home pay each check?
     */
+    double salary = 117000;
+    double weeklyPay = salary / 24;
 
+    double retirementFund = 0.07 * weeklyPay;
+    weeklyPay = weeklyPay - retirementFund;
 
+    double federalTax = 0.24 * weeklyPay;
+    weeklyPay = weeklyPay - federalTax;
+
+    double stateTax = 0.0637 * weeklyPay;
+    weeklyPay = weeklyPay - stateTax;
+
+    System.out.printf("\n$%,.2f.\n",weeklyPay);
 
     /*
     * Exercise 7.
