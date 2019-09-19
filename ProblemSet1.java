@@ -70,11 +70,11 @@ public class ProblemSet1 {
     int test2 = 87;
     int test3 = 82;
 
-    double averageHomeworkGrade = (homework1 + homework2 + homework3) / 3;
-    double averageQuizGrade = (quiz1 + quiz2 + quiz3) / 3;
-    double averageTestGrade = (test1 + test2 + test3) / 3;
+    double averageHomeworkGrade = ((double) homework1 + (double) homework2 + (double) homework3) / 3;
+    double averageQuizGrade = ((double) quiz1 + (double) quiz2 + (double) quiz3) / 3;
+    double averageTestGrade = ((double) test1 + (double) test2 + (double) test3) / 3;
 
-    double averageGrade = (averageHomeworkGrade * 0.15) + (averageQuizGrade * 0.35) + (averageTestGrade * 0.5);
+    double averageGrade = ((double) averageHomeworkGrade * 0.15) + ((double) averageQuizGrade * 0.35) + ((double) averageTestGrade * 0.5);
 
     System.out.printf("\n%, .2f%%.\n", averageGrade);
 
@@ -126,7 +126,6 @@ public class ProblemSet1 {
     *
     * What is the wind chill?
     */
-
 
 
   }
