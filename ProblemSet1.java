@@ -28,7 +28,7 @@ public class ProblemSet1 {
     double widthInMillimeters = width * millimetersInInch;
     double lengthinMillimeters = length * millimetersInInch;
     double area = widthInMillimeters * lengthinMillimeters;
-    System.out.printf("\n%, .2f square millimeters.", area);
+    System.out.printf("\n%, .2f square millimeters.\n", area);
 
     /*
     * Exercise 2.
@@ -39,7 +39,7 @@ public class ProblemSet1 {
     double widthInCentimeters = width * centimetersInInch;
     double lengthInCentimeters = length * centimetersInInch;
     double perimeter = (widthInCentimeters * 2 + lengthInCentimeters * 2);
-    System.out.printf("\n%, .2f centimeters.", perimeter);
+    System.out.printf("\n%, .2f centimeters.\n", perimeter);
 
     /*
     * Exercise 3.
@@ -51,7 +51,7 @@ public class ProblemSet1 {
     double lengthSquared = Math.pow(length, 2);
     double diagonalLengthSquared = widthSquared + lengthSquared;
     double diagonalLength = Math.sqrt(diagonalLengthSquared);
-    System.out.printf("\n%, .2f inches.", diagonalLength);
+    System.out.printf("\n%, .2f inches.\n", diagonalLength);
 
     /*
     * Exercise 4.
@@ -70,13 +70,13 @@ public class ProblemSet1 {
     int test2 = 87;
     int test3 = 82;
 
-    int grades[] = {homework1, homework2, homework3, quiz1, quiz2, quiz3, test1, test2, test3};
-    int gradeSum = 0;
-    for (int i = 0; i < grades.length; i++)
-      gradeSum += grades[i];
-    double averageGrade = ((double) gradeSum) / grades.length;
+    double averageHomeworkGrade = (homework1 + homework2 + homework3) / 3;
+    double averageQuizGrade = (quiz1 + quiz2 + quiz3) / 3;
+    double averageTestGrade = (test1 + test2 + test3) / 3;
 
-    System.out.printf("\n%, .2f%%.", averageGrade);
+    double averageGrade = (averageHomeworkGrade * 0.15) + (averageQuizGrade * 0.35) + (averageTestGrade * 0.5);
+
+    System.out.printf("\n%, .2f%%.\n", averageGrade);
 
 
     /*
