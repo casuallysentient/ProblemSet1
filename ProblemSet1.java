@@ -28,7 +28,7 @@ public class ProblemSet1 {
     double widthInMillimeters = width * millimetersInInch;
     double lengthinMillimeters = length * millimetersInInch;
     double area = widthInMillimeters * lengthinMillimeters;
-    System.out.printf("\n%, .2f square millimeters.\n", area);
+    System.out.printf("\n%,.2f square millimeters.\n", area);
 
     /*
     * Exercise 2.
@@ -39,7 +39,7 @@ public class ProblemSet1 {
     double widthInCentimeters = width * centimetersInInch;
     double lengthInCentimeters = length * centimetersInInch;
     double perimeter = (widthInCentimeters * 2 + lengthInCentimeters * 2);
-    System.out.printf("\n%, .2f centimeters.\n", perimeter);
+    System.out.printf("\n%,.2f centimeters.\n", perimeter);
 
     /*
     * Exercise 3.
@@ -51,7 +51,7 @@ public class ProblemSet1 {
     double lengthSquared = Math.pow(length, 2);
     double diagonalLengthSquared = widthSquared + lengthSquared;
     double diagonalLength = Math.sqrt(diagonalLengthSquared);
-    System.out.printf("\n%, .2f inches.\n", diagonalLength);
+    System.out.printf("\n%,.2f inches.\n", diagonalLength);
 
     /*
     * Exercise 4.
@@ -76,7 +76,7 @@ public class ProblemSet1 {
 
     double averageGrade = ((double) averageHomeworkGrade * 0.15) + ((double) averageQuizGrade * 0.35) + ((double) averageTestGrade * 0.5);
 
-    System.out.printf("\n%, .2f%%.\n", averageGrade);
+    System.out.printf("\n%,.2f%%.\n", averageGrade);
 
 
     /*
@@ -85,7 +85,19 @@ public class ProblemSet1 {
     * I make $12.50/hour working as a cashier at a local supermarket. How much money
     * will I make this week?
     */
+    double mondayHours = 7.5;
+    double tuesdayHours = 8;
+    double wednesdayHours = 10.5;
+    double thursdayHours = 9.5;
+    double fridayHours = 6;
+    double saturdayHours = 11.5;
+    double sundayHours = 0;
+    double hourlyWage = 12.5;
 
+    double totalHours = mondayHours + tuesdayHours + wednesdayHours + thursdayHours + fridayHours + saturdayHours + sundayHours;
+    double totalPaycheck = totalHours * hourlyWage;
+
+    System.out.printf("\n$%,.2f.\n",totalPaycheck);
 
 
     /*
