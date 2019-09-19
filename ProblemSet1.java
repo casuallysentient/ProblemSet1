@@ -14,108 +14,120 @@
 
 public class ProblemSet1 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        /*
-         * Exercise 1.
-         *
-         * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
-         */
-        double width1 = 8.5;
-        double height1 = 11;
-        double millimetersInInch = 25.4;
-        width1 = width1 * millimetersInInch;
-        height1 = height1* millimetersInInch;
-        double result1 = width1 * height1;
+    /*
+    * Exercise 1.
+    *
+    * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
+    */
+    double width = 8.5;
+    double length = 11;
 
-        System.out.printf("\n%, .2f square millimeters.", result1);
+    double millimetersInInch = 25.4;
+    double widthInMillimeters = width * millimetersInInch;
+    double lengthinMillimeters = length * millimetersInInch;
+    double area = widthInMillimeters * lengthinMillimeters;
+    System.out.printf("\n%, .2f square millimeters.", area);
 
+    /*
+    * Exercise 2.
+    *
+    * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
+    */
+    double centimetersInInch = 2.54;
+    double widthInCentimeters = width * centimetersInInch;
+    double lengthInCentimeters = length * centimetersInInch;
+    double perimeter = (widthInCentimeters * 2 + lengthInCentimeters * 2);
+    System.out.printf("\n%, .2f centimeters.", perimeter);
 
-        /*
-         * Exercise 2.
-         *
-         * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
-         */
+    /*
+    * Exercise 3.
+    *
+    * What is the length of the diagonal (in inches) between two corners on an 8.5-
+    * by-11-inch sheet of paper?
+    */
+    double widthSquared = Math.pow(width, 2);
+    double lengthSquared = Math.pow(length, 2);
+    double diagonalLengthSquared = widthSquared + lengthSquared;
+    double diagonalLength = Math.sqrt(diagonalLengthSquared);
+    System.out.printf("\n%, .2f inches.", diagonalLength);
 
+    /*
+    * Exercise 4.
+    *
+    * Given the grading policy and the homework, quiz, and test grades I received,
+    * what marking period grade will I get?
+    */
 
+    int homework1 = 88;
+    int homework2 = 91;
+    int homework3 = 0;
+    int quiz1 = 84;
+    int quiz2 = 89;
+    int quiz3 = 93;
+    int test1 = 74;
+    int test2 = 87;
+    int test3 = 82;
 
-        /*
-         * Exercise 3.
-         *
-         * What is the length of the diagonal (in inches) between two corners on an 8.5-
-         * by-11-inch sheet of paper?
-         */
+    int grades[] = {homework1, homework2, homework3, quiz1, quiz2, quiz3, test1, test2, test3};
+    int gradeSum = 0;
+    for (int i = 0; i < grades.length; i++)
+      gradeSum += grades[i];
+    double averageGrade = ((double) gradeSum) / grades.length;
 
-
-
-        /*
-         * Exercise 4.
-         *
-         * Given the grading policy and the homework, quiz, and test grades I received,
-         * what marking period grade will I get?
-         */
-
-        int homework1 = 88;
-        int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
-
-
-
-        /*
-         * Exercise 5.
-         *
-         * I make $12.50/hour working as a cashier at a local supermarket. How much money
-         * will I make this week?
-         */
-
-
-
-        /*
-         * Exercise 6.
-         *
-         * What is my take-home pay each check?
-         */
+    System.out.printf("\n%, .2f%%.", averageGrade);
 
 
-
-        /*
-         * Exercise 7.
-         *
-         * I am planning a class trip next month. How many buses do I need, and how many
-         * people will be on the last bus?
-         */
+    /*
+    * Exercise 5.
+    *
+    * I make $12.50/hour working as a cashier at a local supermarket. How much money
+    * will I make this week?
+    */
 
 
 
-        /*
-         * Exercise 8.
-         *
-         * What is the surface area of a standard Cornhole board?
-         */
+    /*
+    * Exercise 6.
+    *
+    * What is my take-home pay each check?
+    */
 
 
 
-        /*
-         * Exercise 9.
-         *
-         * Are the years 2020, 2100, and 2400 leap years?
-         */
+    /*
+    * Exercise 7.
+    *
+    * I am planning a class trip next month. How many buses do I need, and how many
+    * people will be on the last bus?
+    */
 
 
 
-        /*
-         * Exercise 10.
-         *
-         * What is the wind chill?
-         */
+    /*
+    * Exercise 8.
+    *
+    * What is the surface area of a standard Cornhole board?
+    */
 
 
 
-    }
+    /*
+    * Exercise 9.
+    *
+    * Are the years 2020, 2100, and 2400 leap years?
+    */
+
+
+
+    /*
+    * Exercise 10.
+    *
+    * What is the wind chill?
+    */
+
+
+
+  }
 }
