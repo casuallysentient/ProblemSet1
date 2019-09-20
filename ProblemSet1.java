@@ -152,6 +152,7 @@ public class ProblemSet1 {
     boardArea = boardArea - holeArea;
 
     System.out.printf("%,.2f square inches.\n", boardArea);
+
     /*
     * Exercise 9.
     *
@@ -165,7 +166,10 @@ public class ProblemSet1 {
     *
     * What is the wind chill?
     */
+    double temperature = 38;
+    double windSpeed = 14;
 
-
+    double windChill = 35.74 + (0.6215 * temperature) + ((0.4275 * temperature) - 35.75) * (Math.pow(windSpeed, 0.16));
+    System.out.printf("\n%,.1f degrees.\n", windChill);
   }
 }
