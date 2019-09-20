@@ -136,7 +136,7 @@ public class ProblemSet1 {
     int numBuses = (int) (Math.ceil((double) totalPassengers / (double) busCapacity));
     int remainingPassengers = totalPassengers % busCapacity;
 
-    System.out.println("\n" + numBuses + " buses are needed, with " + remainingPassengers + " passengers on the last bus.\n");
+    System.out.println("\n" + numBuses + " buses are needed, with " + remainingPassengers + " passengers on the last bus.");
 
     /*
     * Exercise 8.
@@ -151,15 +151,24 @@ public class ProblemSet1 {
     double holeArea = Math.pow(holeDiameter / 2, 2) * Math.PI;
     boardArea = boardArea - holeArea;
 
-    System.out.printf("%,.2f square inches.\n", boardArea);
+    System.out.printf("\n%,.2f square inches.\n", boardArea);
 
     /*
     * Exercise 9.
     *
     * Are the years 2020, 2100, and 2400 leap years?
     */
+    int year1 = 2020;
+    int year2 = 2100;
+    int year3 = 2400;
 
+    boolean isLeapYear2020 = (year1 % 4 == 0 && (year1 % 100 != 0 | year1 % 400 == 0));
+    boolean isLeapYear2100 = (year2 % 4 == 0 && (year2 % 100 != 0 | year2 % 400 == 0));
+    boolean isLeapYear2400 = (year3 % 4 == 0 && (year3 % 100 != 0 | year3 % 400 == 0));
 
+    System.out.println("\n" + year1 + " is a leap year..." + isLeapYear2020 + ".");
+    System.out.println(year2 + " is a leap year..." + isLeapYear2100 + ".");
+    System.out.println(year3 + " is a leap year..." + isLeapYear2400 + ".");
 
     /*
     * Exercise 10.
