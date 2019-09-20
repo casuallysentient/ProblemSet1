@@ -59,7 +59,6 @@ public class ProblemSet1 {
     * Given the grading policy and the homework, quiz, and test grades I received,
     * what marking period grade will I get?
     */
-
     int homework1 = 88;
     int homework2 = 91;
     int homework3 = 0;
@@ -129,17 +128,30 @@ public class ProblemSet1 {
     * I am planning a class trip next month. How many buses do I need, and how many
     * people will be on the last bus?
     */
+    int numStudents = 273;
+    int numTeachers = 28;
+    int busCapacity = 54;
 
+    int totalPassengers = numStudents + numTeachers;
+    int numBuses = (int) (Math.ceil((double) totalPassengers / (double) busCapacity));
+    int remainingPassengers = totalPassengers % busCapacity;
 
+    System.out.println("\n" + numBuses + " buses are needed, with " + remainingPassengers + " passengers on the last bus.\n");
 
     /*
     * Exercise 8.
     *
     * What is the surface area of a standard Cornhole board?
     */
+    double boardLength = 48;
+    double boardWidth = 24;
+    double holeDiameter = 6;
 
+    double boardArea = boardLength * boardWidth;
+    double holeArea = Math.pow(holeDiameter / 2, 2) * Math.PI;
+    boardArea = boardArea - holeArea;
 
-
+    System.out.printf("%,.2f square inches.\n", boardArea);
     /*
     * Exercise 9.
     *
